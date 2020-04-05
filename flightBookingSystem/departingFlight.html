@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title> Departing Flight </title>
+
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js">
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"> </script>
+<script src="departingFlight.js"> </script>
+
+</head>
+
+<body>
+
+  <div id="background">
+    <div class="overlay">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 id="title"> Departing Flight </h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 ">
+        <div id="journeyInfo">
+          <p> <span id="localDepartureDate"> </span> <span id="chosenSeats"> </span> </p>
+          <p> <span id="localHome"> </span> to <span id="localDestination"> </span> <span id="passengers"> </span> </p>
+          <p> <span id="localDeparture"> </span> <span id="localArrival"> </span> <span id="totalPrice"> </span> </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row flights">
+
+      <div class="col-lg-2">
+        <div class="flight">
+          <p> Dep <span id="dawn"> </span> </p>
+          <p> Arr <span id="dawnFlightTime"> </span> </p>
+          <p> £ <span id="dawnPrice" class="price"> </span> </p>
+          <p class="valueBanner"> Lowest Fare! </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="flight">
+          <p> Dep <span id="morning"> </span> </p>
+          <p> Arr <span id="morningFlightTime"> </span> </p>
+          <p> £ <span id="morningPrice" class="price"> </span> </p>
+          <p class="valueBanner"> Lowest Fare! </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="flight">
+          <p> Dep <span id="brunch"> </span> </p>
+          <p> Arr <span id="brunchFlightTime"> </span> </p>
+          <p> £ <span id="brunchPrice" class="price"> </span> </p>
+          <p class="valueBanner"> Lowest Fare! </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="flight">
+          <p> Dep <span id="afternoon"> </span> </p>
+          <p> Arr <span id="afternoonFlightTime"> </span> </p>
+          <p> £ <span id="afternoonPrice" class="price"> </span> </p>
+          <p class="valueBanner"> Lowest Fare! </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="flight">
+          <p> Dep <span id="evening"> </span> </p>
+          <p> Arr <span id="eveningFlightTime"> </span> </p>
+          <p> £ <span id="eveningPrice" class="price"> </span> </p>
+          <p class="valueBanner"> Lowest Fare! </p>
+        </div>
+      </div>
+
+      <div class="col-lg-2">
+        <div class="flight">
+          <p> Dep <span id="dusk"> </span> </p>
+          <p> Arr <span id="duskFlightTime"> </span> </p>
+          <p> £ <span id="duskPrice" class="price"> </span> </p>
+          <p class="valueBanner"> Lowest Fare! </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-12">
+        <button id="chooseSeats"> Choose Seats </button>
+      </div>
+
+    </div>
+
+    <div class="row seats">
+
+      <div class="col-lg-12">
+
+        <table id="seats">
+          <tr>
+            <th> </th>
+            <th class="seatsHeading"> A </th>
+            <th class="seatsHeading"> B </th>
+            <th class="seatsHeading"> C </th>
+            <th class="seatsHeading"> D </th>
+            <th class="seatsHeading"> E </th>
+            <th class="seatsHeading"> F </th>
+            <th class="seatsHeading"> G </th>
+          </tr>
+
+          <tr>
+            <td> 1 </td>
+            <td data-seatNumber="A1"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="B1"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="C1"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="D1"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="E1"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="F1"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="G1"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+          </tr>
+
+          <tr>
+            <td> 2 </td>
+            <td data-seatNumber="A2"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="B2"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="C2"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="D2"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="E2"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="F2"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+            <td data-seatNumber="G2"> <img src="images/emptyChair.png" alt="emptyChair"> </td>
+          </tr>
+
+          <tr>
+            <td> 3 </td>
+            <td data-seatNumber="A3"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="B3"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="C3"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="D3"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="E3"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="F3"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="G3"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+          </tr>
+
+          <tr>
+            <td> 4 </td>
+            <td data-seatNumber="A4"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="B4"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="C4"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="D4"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="E4"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="F4"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+            <td data-seatNumber="G4"> <img src="images/emptyChair.png" alt="emptyChair">  </td>
+          </tr>
+
+        </table>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-lg-12">
+        <button id="chooseReturn" onclick="window.location.href = 'returningFlight.html';">Return Flight</button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

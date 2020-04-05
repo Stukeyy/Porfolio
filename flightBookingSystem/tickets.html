@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title> Tickets </title>
+
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js">
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"> </script>
+<script src="tickets.js"> </script>
+
+</head>
+
+<body>
+
+  <div id="background">
+    <div class="overlay">
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h1 id="title"> Tickets </h1>
+      </div>
+    </div>
+
+    <h2 class="ticketType"> Departing Ticket </h2>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="departingTicket">
+          <p class="zebra"> <span class="left" id="ticketDepartureDate"> </span> <span class="right" id="ticketChosenSeats"> </span> </p>
+          <p class="zebro"> <span class="left" id="ticketHome"> </span> <span class="right" id="ticketDestination"> </span> </p>
+          <p class="zebra"> <span class="left" id="ticketDeparture"> </span> <span class="right" id="ticketArrival"> </span> </p>
+          <p class="zebro"> <span class="left" id="ticketName"> </span> <span class="right" id="ticketNumber"> </span> </p>
+          <p class="zebra"> <span class="left" id="ticketSurname"> </span> <span class="right" id="ticketEmail"> </span> </p>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="ticketType"> Return Ticket </h2>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div id="returningTicket">
+          <p class="zebra"> <span class="left" id="returnTicketDepartureDate"> </span> <span class="right" id="returnTicketChosenSeats"> </span> </p>
+          <p class="zebro"> <span class="left" id="returnTicketDestination"> </span> <span class="right" id="returnTicketHome"> </span> </p>
+          <p class="zebra"> <span class="left" id="returnTicketDeparture"> </span> <span class="right" id="returnTicketArrival"> </span> </p>
+          <p class="zebro"> <span class="left" id="returnTicketName"> </span> <span class="right" id="returnTicketNumber"> </span> </p>
+          <p class="zebra"> <span class="left" id="returnTicketSurname"> </span> <span class="right" id="returnTicketEmail"> </span> </p>
+        </div>
+      </div>
+    </div>
+
+    <div id="overallCost" class="row">
+      <div class="col-lg-6">
+        <p class="costing"> Passengers : <span id="finalPassengers"> </span> </p>
+      </div>
+      <div class="col-lg-6">
+        <p class="costing"> Price : <span id="price"> </span> </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <button id="newFlight" onclick="window.location.href = 'index.html';"> New Flight </button>
+      </div>
+    </div>
+
+
+  </div>
+
+    </div>
+  </div>
+
+  </body>
+
+</html>

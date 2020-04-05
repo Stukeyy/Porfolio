@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title> Booking Information </title>
+
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js">
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"> </script>
+<script src="booking.js"> </script>
+
+</head>
+
+<body>
+
+  <div id="background">
+    <div class="overlay">
+
+      <div class="homeExit"> </div>
+      <div class="destinationExit"> </div>
+      <div class="departureExit"> </div>
+      <div class="returningExit"> </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 id="title"> Booking Information </h1>
+          </div>
+        </div>
+
+      <form id="info" action="tickets.html" autocomplete="off">
+
+        <div class="row">
+          <div id="firstName" class="col-lg-6">
+            <input id="fName" name="fName" type="text" class="choice" placeholder="First Name" autocomplete="off" maxlength="16" required>
+              <div id="fNameError" class="error"> </div>
+          </div>
+
+          <div id="surName" class="col-lg-6">
+            <input id="sName" name ="sName" type="text" class="choice" placeholder="Surname" autocomplete="off" required>
+              <div id="sNameError" class="error"> </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="expiryDate" class="col-lg-4">
+            <input id="expiry" name="expiry" type="text" class="choice" placeholder="Expiry Date (mm/yy)" autocomplete="off" maxlength="7" required>
+          </div>
+
+          <div id="cardNumber" class="col-lg-4">
+            <input id="longNumber" name="longNumber" type="text" class="choice" placeholder="Card Number" autocomplete="off" maxlength="19" required>
+          </div>
+
+          <div id="securityCode" class="col-lg-4">
+            <input id="secCode" name ="secCode" type="text" class="choice" placeholder="Security Code" autocomplete="off" maxlength="3" required>
+          </div>
+        </div>
+
+        <div id="cardError" class="error"> </div>
+
+        <div class="row">
+          <div id="phoneNumber" class="col-lg-6">
+            <input id="number" name="number" type="text" class="choice" placeholder="Phone Number" autocomplete="off" maxlength="11" required>
+              <div id="numberError" class="error"> </div>
+          </div>
+
+          <div id="email" class="col-lg-6">
+            <input id="mail" name ="email" type="text" class="choice" placeholder="Email" autocomplete="off" required>
+              <div id="emailError" class="error"> </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 text-center">
+            <button id="book" type="submit"> Book </button>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <button id="clean" type="reset"> Reset </button>
+          </div>
+        </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>

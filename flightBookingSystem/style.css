@@ -1,0 +1,359 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+#background {
+  background-image: url('images/1.jpg');
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  transform: scaleY(1);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 150%;
+}
+
+.container {
+  height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.55);
+}
+
+#title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 30pt;
+  color: white;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.row {
+  margin-top: 2%;
+}
+
+input {
+  font-family: 'Montserrat', sans-serif;
+  background: rgba(0,0,0,0);
+  text-align: center;
+  border: 0px;
+  outline: none;
+  color: white;
+  font-size: 28px;
+  border-bottom: 3px solid #5e32a8;
+}
+
+::placeholder {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+.extra {
+  font-family: 'Montserrat', sans-serif;
+  width: 50px;
+  background: rgba(0,0,0,0);
+  border: 0px;
+  outline: none;
+  color: #5e32a8;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  color: white;
+}
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #5e32a8;
+  outline: none;
+  margin-top: 15%;
+  width: 40%;
+  padding: 1%;
+  font-size: 28px;
+  border: 0px;
+  border-radius: 10px;
+  color: white;
+}
+
+button:hover {
+  background-color: white;
+  color: #5e32a8;
+}
+
+button:focus {
+  outline: none;
+}
+
+.error {
+  display: none;
+  color: white;
+  margin-top: 2%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+#passengerError, #cardError, #fnameError {
+  display: none;
+  text-align: center;
+  color: white;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+}
+
+#homeInput, #destinationInput, #home, #destination, #departureDateInput, #returnDateInput, #departure, #returning  {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.homeChoices, .destinationChoices, .departureChoices, .returnChoices {
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  z-index: 1;
+  display: none;
+  height: 100%;
+  width: 50%;
+  color: white;
+  text-align: center;
+  background: rgba(0,0,0,0.8);
+}
+
+.homeExit, .destinationExit, .departureExit, .returningExit {
+  display: none;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.homeChoices, .departureChoices {
+  margin-left: 50%;
+}
+
+.drawerHeading {
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 16pt;
+  margin-top: 5%;
+}
+
+
+ul {
+  font-size: 14pt;
+  margin-top: 5%;
+  list-style: none;
+  line-height: 2.5em;
+}
+
+
+@keyframes animate{
+  0%, 100%{
+    background-image: url('images/1.jpg');
+  }
+}
+
+.ui-datepicker {
+  background-color: rgba(0,0,0,0);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16pt;
+  border: 0px;
+  width: 100%;
+  height: 50%;
+}
+
+.ui-widget.ui-widget-content {
+  border: 1px solid rgba(0,0,0,0);
+}
+
+th, .ui-state-default, .ui-widget-content .ui-state-default {
+  background: rgba(0,0,0,0);
+  text-align: center;
+  left: center;
+  border: 0px;
+  color: white;
+  height: 50px;
+}
+
+.ui-state-default:hover, .ui-widget-content:hover .ui-state-default:hover {
+  background: white;
+  color: black;
+}
+
+/*########################################################################################## Flight Selection */
+
+#journeyInfo {
+  font-family: 'Montserrat', sans-serif;
+  text-align: left;
+  margin-bottom: 5%;
+  color: white;
+  font-size: 25px;
+  border-bottom: 3px solid #5e32a8;
+}
+
+
+#passengers, #totalPrice, #chosenSeats {
+  float: right;
+}
+
+.flight {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10%;
+  margin-bottom: 5%;
+  height: auto;
+  color: #5e32a8;
+  font-size: 20px;
+  border: 2px solid;
+  border-color: #5e32a8;
+  border-radius: 25px;
+  background-color: rgba(255, 253, 245, 0.79);
+}
+
+.valueBanner {
+  display: none;
+}
+
+#chooseSeats {
+  display: none;
+  width: 300px;
+  float: right;
+  margin-top: 1%;
+}
+
+#chooseReturn, #bookingInfo {
+  display: none;
+  width: 300px;
+  float: left;
+  margin-top: 1%;
+}
+
+#seats {
+  display: none;
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  text-align: center;
+  height: auto;
+  color: #5e32a8;
+  font-size: 20px;
+  border: 2px solid;
+  border-color: #5e32a8;
+  background-color: rgba(255, 253, 245, 0.79);
+}
+
+.seatsHeading {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #5e32a8;
+  font-size: 20px;
+  border: 2px solid;
+  border-color: #5e32a8;
+  width: auto;
+}
+
+td {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #5e32a8;
+  font-size: 20px;
+  border: 2px solid;
+  border-color: #5e32a8;
+  padding: 0;
+  width: 50px;
+}
+
+/*########################################################################################## Booking Info */
+
+
+#firstName, #surName, #expiryDate, #cardNumber, #securityCode, #phoneNumber, #email {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 10%;
+}
+
+#cardError {
+  margin-top: -5%;
+}
+
+#book, #clean {
+  margin-top: -5%;
+}
+
+/*########################################################################################## Tickets */
+
+#departingTicket, #returningTicket {
+  font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  height: auto;
+  color: white;
+  font-size: 20px;
+  border: 2px solid;
+  border-color: #5e32a8;
+  background-color: rgba(255, 253, 245, 0.79);
+}
+
+.ticketType {
+  font-family: 'Dancing Script', cursive;
+  color: white;
+  font-size: 22pt;
+  margin-top: 5%;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  float: right;
+}
+
+.zebra {
+  background-color: rgba(94, 50, 168, 0.57);
+  padding: 10px;
+  padding-right: 55px;
+  padding-left: 55px;
+  margin: 0;
+}
+
+.zebro {
+  background-color: rgba(94, 50, 168, 0.85);
+  padding: 10px;
+  padding-right: 55px;
+  padding-left: 55px;
+  margin: 0;
+}
+
+.costing {
+  margin-top: 5%;
+  font-family: 'Dancing Script', cursive;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+}
+
+#overallCost {
+  margin-top: 5%;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: #5e32a8;
+}
+
+#newFlight {
+  width: 300px;
+  float: right;
+  margin-top: 3%;
+}

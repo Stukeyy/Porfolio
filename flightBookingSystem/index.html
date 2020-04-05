@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<title> Winging It </title>
+
+<meta name="description" content="Flight Booking System">
+<meta name="author" content="Stephen Ross & Andrew Neil">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Montserrat:300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js">
+</script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"> </script>
+<script src="index.js"> </script>
+
+</head>
+
+<body>
+
+  <div id="background">
+    <div class="overlay">
+
+      <div class="homeExit"> </div>
+      <div class="destinationExit"> </div>
+      <div class="departureExit"> </div>
+      <div class="returningExit"> </div>
+
+      <div class="homeChoices">
+        <h2 class="drawerHeading"> Where are you flying from? </h2>
+        <ul>
+          <li class="home">Belfast</li>
+          <li class="home">Dublin</li>
+          <li class="home">Galway</li>
+          <li class="home">Donegal</li>
+          <li class="home">Banbridge</li>
+          <li class="home">Cookstown</li>
+          <li class="home">Edinburgh</li>
+          <li class="home">Glasgow</li>
+          <li class="home">Manchester</li>
+          <li class="home">Newcastle</li>
+          <li class="home">London</li>
+          <li class="home">Liverpool</li>
+          <li class="home">Leeds</li>
+        </ul>
+      </div>
+
+      <div class="departureChoices">
+        <div class="departureCalendar">
+        </div>
+      </div>
+
+      <div class="destinationChoices">
+        <h2 class="drawerHeading"> Where are you flying to? </h2>
+        <ul>
+          <li class="destination">Valencia</li>
+          <li class="destination">Amsterdam</li>
+          <li class="destination">Berlin</li>
+          <li class="destination">Ibiza</li>
+          <li class="destination">Boston</li>
+          <li class="destination">Miami</li>
+          <li class="destination">Paris</li>
+          <li class="destination">Alicante</li>
+          <li class="destination">Marrakesh</li>
+          <li class="destination">Oslow</li>
+          <li class="destination">Rio</li>
+          <li class="destination">Bogota</li>
+          <li class="destination">Magnolia</li>
+        </ul>
+      </div>
+
+      <div class="returnChoices">
+        <div class="returnCalendar">
+        </div>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h1 id="title"> Wingin It </h1>
+          </div>
+        </div>
+
+      <form id="holidayPlan" action="departingFlight.html" autocomplete="off">
+
+        <div class="row">
+          <div id="homeInput" class="col-lg-6">
+            <input id="home" name="home" type="text" class="choice" placeholder="Home" autocomplete="off" required>
+            <input id="openHomeChoices" class="extra" type="button" value="...">
+              <div id="homeError" class="error"> </div>
+          </div>
+
+          <div id="destinationInput" class="col-lg-6">
+            <input id="destination" name ="destination" type="text" class="choice" placeholder="Destination" autocomplete="off" required>
+            <input id="openDestinationChoices" class="extra" type="button" value="...">
+              <div id="destinationError" class="error"> </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="departureDateInput" class="col-lg-6">
+            <input id="departure" name="departure" readonly="readonly" class="choice" placeholder="Depart" autocomplete="off" required>
+            <input id="checkDepartureDates" class="extra" type="button" value="...">
+              <div id="departureError" class="error"> </div>
+          </div>
+
+          <div id="returnDateInput" class="col-lg-6">
+            <input id="returning" name="returning" readonly="readonly" class="choice" placeholder="Return" autocomplete="off" required>
+            <input id="checkReturnDates" class="extra" type="button" value="...">
+              <div id="returningError" class="error"> </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="adultInput" class="col-lg-4 text-center">
+            <input id="adults" name="adults" type="number" min="0" value="1" required>
+            <label for="adults"> Adults (age: 18+) </label>
+          </div>
+
+          <div id="childInput" class="col-lg-4 text-center">
+            <input id="children" name="children" type="number" min="0" value="0">
+            <label for="children"> Children (age: 6 - 17)</label>
+          </div>
+
+          <div id="infantInput" class="col-lg-4 text-center">
+            <input id="infants" name="infants" type="number" min="0" value="0">
+            <label for="infants"> Infants (age: 0 - 5)</label>
+          </div>
+        </div>
+
+        <div id="passengerError" class="error"> </div>
+
+        <div class="row">
+          <div class="col-lg-6 text-center">
+            <button id="findFlights" type="submit"> Find Flights </button>
+          </div>
+
+          <div class="col-lg-6 text-center">
+            <button id="reset"> Reset </button>
+          </div>
+        </div>
+
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+
+</html>
